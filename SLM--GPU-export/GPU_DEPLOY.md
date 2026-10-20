@@ -1,10 +1,6 @@
 # Running on a GPU server
 
-This repo ships the **architecture only** — code, the trained ML classifier
-artifacts (`ml/models/*.joblib`), and the knowledge base
-(`data/reason_code_kb.json`). It does **not** ship the raw training rows
-(`data/train.jsonl` / `val.jsonl` / `test.jsonl` are git-ignored) or any Ollama
-model weights — those live outside git and are handled separately, as below.
+
 
 Nothing in this stack requires the GPU directly. The GPU is used by **Ollama**,
 which this app talks to over plain HTTP (`OLLAMA_HOST`) — the FastAPI service,
